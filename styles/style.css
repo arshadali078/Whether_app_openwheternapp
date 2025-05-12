@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: #121212;
+  color: #fff;
+}
+
+.imgs-as-icons {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.375);
+  text-align: right;
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.navbar li a {
+  font-size: 1.25rem;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navbar a:hover:not(.repo-link) {
+  background: #000;
+}
+
+.navbar .search-city {
+  width: 25vw;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+}
+
+.mobile-navbar {
+  display: none;
+  list-style-type: none;
+  padding: 1rem;
+  background: #1d1d1f;
+}
+
+.mobile-navbar li {
+  margin: 0.75rem auto;
+  width: 87.5%;
+}
+
+.mobile-navbar li input {
+  width: 100%;
+  height: 50px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 50px;
+  padding: 0 1rem;
+  background: #2c2c2e;
+  color: #fff;
+  text-align: center;
+}
+
+.mobile-navbar input::placeholder {
+  color: lightgrey;
+}
+
+.location-name,
+.weather-type {
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+.temperature-container {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.temperature-icon {
+  margin-bottom: -10px;
+}
+
+.temperature-value {
+  color: #fff;
+}
+
+.additionals-first-row,
+.additionals-second-row {
+  font-size: 0.875rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.air-quality-additional,
+.real-feel-additional,
+.humidity-additional,
+.max-temperature-additional,
+.min-temperature-additional,
+.wind-speed-additional,
+.wind-direction-additional,
+.visibility-additional,
+.pressure-additional,
+.sunrise-additional,
+.sunset-additional {
+  background: #fff;
+  color: #000;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.separator {
+  width: 25%;
+  margin: 1rem auto;
+  height: 0.5rem;
+  background: lightgrey;
+  border-radius: 50px;
+}
+
+.daily-forecast {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.daily-forecast .daily-forecast-label {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.daily-forecast-card {
+  display: inline-block;
+  width: 125px;
+  height: 162.5px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.daily-forecast-logo {
+  font-size: 2rem;
+  margin-top: -10px;
+}
+
+.daily-forecast-date {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+}
+
+.weather-type-daily-forecast {
+  font-weight: normal;
+  margin-top: 0.25rem;
+}
+
+.max-min-temperature-daily-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.max-daily-forecast {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.min-daily-forecast {
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+
+  .additionals-first-row span,
+  .additionals-second-row span {
+    display: none;
+  }
+
+  .daily-forecast .daily-forecast-label {
+    background: lightgrey;
+    color: #252525;
+    padding: 0.5rem 1rem;
+    width: 75%;
+    border-radius: 50px;
+    margin: auto;
+  }
+
+  .daily-forecast-card {
+    margin: 1rem auto;
+  }
+}

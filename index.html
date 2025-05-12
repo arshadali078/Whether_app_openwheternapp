@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Custom Style -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+      color: white;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar input {
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      width: 250px;
+    }
+
+    .location-name {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    .temperature-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+
+    .temperature-icon img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+    }
+
+    .weather-type {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 0.5rem;
+      backdrop-filter: blur(5px);
+    }
+
+    .forecast-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .daily-forecast-label {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .temperature-container {
+        flex-direction: column;
+        font-size: 2rem;
+      }
+
+      .navbar input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar d-flex justify-content-between align-items-center">
+    <a href="https://github.com/https:/arshadali078/" class="text-white fw-bold text-decoration-none">⛄ Forecast</a>
+    <input type="text" id="searchCity" class="form-control" placeholder="🔍 Search City" />
+  </nav>
+
+  <!-- Main Weather Info -->
+  <div class="text-center">
+    <h1 class="location-name" id="locationName">Search City...</h1>
+
+    <div class="temperature-container">
+      <div class="temperature-icon">
+        <img src="icons/Arshad.png" alt="Weather Icon" />
+      </div>
+      <div class="temperature-value" id="temperatureValue">--°C</div>
+    </div>
+
+    <h2 class="weather-type" id="weatherType">--</h2>
+  </div>
+
+  <!-- Additional Weather Info -->
+  <div class="container mt-4">
+    <div class="row text-center">
+      <div class="col-md-4"><div class="card"><strong>Real Feel:</strong> <span id="realFeelAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Humidity:</strong> <span id="humidityAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>High Temp:</strong> <span id="maxTemperatureAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Low Temp:</strong> <span id="minTemperatureAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Wind Speed:</strong> <span id="windSpeedAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Wind Direction:</strong> <span id="windDirectionAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Visibility:</strong> <span id="visibilityAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Pressure:</strong> <span id="pressureAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Sunrise:</strong> <span id="sunriseAdditionalValue">--</span></div></div>
+      <div class="col-md-4"><div class="card"><strong>Sunset:</strong> <span id="sunsetAdditionalValue">--</span></div></div>
+    </div>
+  </div>
+
+  <!-- Daily Forecast -->
+  <div class="daily-forecast">
+    <h2 class="daily-forecast-label">7-Day Forecast</h2>
+    <div id="forecast-container" class="forecast-container">
+      <!-- JS will populate forecast cards here -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/script.js"></script>
+  <script src="scripts/mobile.js"></script>
+
+</body>
+</html>
